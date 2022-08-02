@@ -1,0 +1,25 @@
+{
+  "name": "blog-site",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.19.2",
+    "gatsby-link": "^4.19.1",
+    "gatsby-plugin-react-helmet": "^5.19.0",
+    "gatsby-react-router-scroll": "^5.19.0",
+    "gatsby-script": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
+  }
+}
