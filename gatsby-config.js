@@ -22,14 +22,33 @@ module.exports = {
                 // graphql but also turn them into pages with their own address that matches the name of the file.
             },
         },
+        'gatsby-remark-images',
         {
             resolve: 'gatsby-plugin-mdx',
             options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 1200,
+                        }
+                    }
+                ],
                 defaultLayouts: {
                     posts: require.resolve('./src/components/post-layout.js'), // so by this we don't need to import manually in every blog page .
                 }
             },
-        }
+        },
         // end of MDX config
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'images',
+                path: `${__dirname}/src/images`,
+            },
+        },
+        'gatsby-plugin-image',
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
     ]
 }
