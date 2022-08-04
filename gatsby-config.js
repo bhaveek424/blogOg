@@ -7,6 +7,7 @@ module.exports = {
     },
     plugins: [
         'gatsby-plugin-react-helmet',
+        //This set of plugins is to enable creating MDX blog posts from src/posts folder
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -23,7 +24,12 @@ module.exports = {
         },
         {
             resolve: 'gatsby-plugin-mdx',
-            options: {},
+            options: {
+                defaultLayouts: {
+                    posts: require.resolve('./src/components/post-layout.js'), // so by this we don't need to import manually in every blog page .
+                }
+            },
         }
+        // end of MDX config
     ]
 }

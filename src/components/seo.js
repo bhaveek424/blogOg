@@ -35,7 +35,6 @@ export function Seo(props) {
             <link rel="canonical" href={url} />
             {image && <meta name="image" content={image} />} 
 
-            // Facebook
             <meta property="og:url" content={url} /> 
             <meta property="og:type" content="website" />
             <meta property="og:title" content={title} />
